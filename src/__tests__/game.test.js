@@ -1,4 +1,5 @@
 import { Ship } from "../functionality/ship";
+import { Gameboard } from "../functionality/gameboard";
 
 it("Seeing if hit method adds 1", () => {
   const test = new Ship(5);
@@ -13,7 +14,7 @@ it("Seeing if the getLength function returns the initialized length", () => {
 });
 
 it("Seeing if the sunk function will return false if length is higher than hits", () => {
-  const test = new Ship(2);
+  const test = new Ship(2); // initializing a new Ship class with a length of two.
 
   test.hit(); //adding one to the hit property
 
@@ -27,4 +28,9 @@ it("Seeing if the sunk function will return true if length is equal to the hits"
   test.hit(); //adding one more to the property to equal 2
 
   expect(test.isSunk()).toBe(true);
+});
+
+it("Grid is populating 10 x 10 on the gameboard", () => {
+  const gameboard = new Gameboard();
+  expect(gameboard.createGrid()).toHaveBeenCalled();
 });

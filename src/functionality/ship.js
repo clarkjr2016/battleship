@@ -9,8 +9,8 @@ export class Ship {
     return this.length;
   }
 
-  hit() {
-    return (this.hits += 1); // increases this objects hit count by 1;
+  hit(n = 1) {
+    return (this.hits += n); // increases this objects hit count by 1;
   }
 
   getHits() {
