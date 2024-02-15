@@ -1,6 +1,6 @@
 export class Ship {
   constructor(length) {
-    this.length = length;
+    this.length = length; // length of the ship
     this.hits = 0; // hits will always start off with 0
     this.sunk = false; // ships will always start off with a false sunk status
   }

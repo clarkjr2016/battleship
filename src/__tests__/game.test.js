@@ -32,5 +32,6 @@ it("Seeing if the sunk function will return true if length is equal to the hits"
 
 it("Grid is populating 10 x 10 on the gameboard", () => {
   const gameboard = new Gameboard();
-  expect(gameboard.createGrid()).toHaveBeenCalled();
+  expect(gameboard.createGrid()).toBeInstanceOf(Array); // I actually want to check what is being returned from the createGrid method.
+  expect(gameboard.createGrid()).toHaveLength(10); // I want to check if the grid is 10 x 10
 });
